@@ -96,7 +96,7 @@ const numbers = ['91', '5', '30', '97', '83', '31']
 let sum = 0
 
 for(let i = 0; i < numbers.length; i++){
-    sum += Number(numbers[i])
+    sum += Number(numbers[i])//Tranforma a string em número
 }
 // console.log(sum === 337)
 
@@ -118,7 +118,11 @@ const arrays = [
   [8, 32, 16],
   [2, 8, 4]
 ]
+let arraysSum = 0
 
 for(let i = 0; i < arrays.length; i++){
+  for(let j = 0; j < arrays[i].length; j++)
+    arraysSum += arrays[i][j]
 
 }
+console.log(arraysSum)
