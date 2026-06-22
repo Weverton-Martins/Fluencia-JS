@@ -66,18 +66,31 @@ if(horas >= 6 && horas < 12){
   - Agora, teste diferentes idades para se certificar que a condição do `if`  
     também está funcionando.
 */
+const myAge = 26
+
+if(myAge <= 7 || myAge >= 65){
+  console.log('Para você, a entrada é grátis!')
+}else{
+  console.log('A entrada é R$ 30,00.')
+}
 
 /*
   04
 
-  - Utilize um for loop para gerar um novo array com apenas os números entre  
-    11 e 90 presentes no array "numbers" (incluindo 11 e 90);
+  - Utilize um for loop para gerar um novo array com apenas os números entre  11 e 90 presentes no array "numbers" (incluindo 11 e 90);
   - Exiba o novo array no console;
   - O resultado deve ser: [34, 46, 90, 25, 11, 89, 76].
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+let newArray = []
 
+for(let i = 0; i < numbers.length; i++){
+  if(numbers[i] >= 11 && numbers[i] <= 90){
+    newArray.push(numbers[i]) 
+  }
+}
+console.log(newArray)
 /*
   05
 
@@ -93,6 +106,21 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
 
+let arrayString = 0
+let arraysNunbers = 0
+let arrayBooleans = 0
+
+for(let i = 0; i < crazyArray.length; i++){
+  if(typeof crazyArray[i] === 'number'){
+    arraysNunbers += 1
+  }else if(typeof crazyArray[i] === 'boolean'){
+    arrayBooleans += 1
+  }else{
+    arrayString += 1
+  }
+}
+
+console.log(`O crazyArray tem ${arrayBooleans} booleans, ${arraysNunbers} números e ${arrayString} strings.`)
 /*
   06
 
@@ -111,3 +139,14 @@ const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false
 */
 
 const randomNumbers = [73, 4, 67, 10, 31, 58]
+let arraysPares = []
+let arrayImpares = []
+
+for(let i = 0; i <= randomNumbers.length; i++){
+  if(randomNumbers[i] % 2 === 0){
+    arraysPares.push(randomNumbers[i])
+  }else{
+    arrayImpares.push(randomNumbers[i])
+  }
+}
+console.log(`Numeros ímpares: ${arrayImpares.join(', ').replace(', 31,', ' e 31.')}Números pares: ${arraysPares.join(', ').replace(', 5', ' e 5')}.`)
