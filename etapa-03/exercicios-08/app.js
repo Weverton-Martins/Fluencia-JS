@@ -79,3 +79,85 @@ console.log(newUpperCase)
 */
 
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
+let positivos = 0
+let negativos = 0
+
+const positiveNumber = function(number1 = 0){
+  return number1 >= 1
+}
+
+for(let i = 0; i < randomNumbers.length; i++){
+  if(positiveNumber(randomNumbers[i])){
+    positivos++
+  }else{
+    negativos++
+  }
+}
+
+console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${positivos} positivos e ${negativos} negativos.`)
+/*
+  06
+
+  - Descomente a invocação da função abaixo e implemente-a;
+  - Ela deve retornar um novo array com apenas os números ímpares do array
+    passado por argumento;
+  - Exiba o novo array no console, sem inserir um console.log() dentro da
+    função.
+*/
+
+const getOddNumbers = function(number = []){
+  newgetOddNumbers = []
+  
+  for(let i = 0; i < number.length; i++){
+    if(number[i] % 2 != 0){
+      newgetOddNumbers.push(number[i])
+    }
+
+  }
+  
+  return newgetOddNumbers
+}
+
+const oddNumbers = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+console.log(oddNumbers)
+/*
+  07
+
+  - Forme uma frase com o array abaixo e exiba-a no console.
+*/
+
+const functions = [
+  function () { return 'Plymouth' },
+  function () { return 'é' },
+  function () { return 'uma' },
+  function () { return 'cidade' },
+  function () { return 'fantasma' },
+  function () { return 'localizada' },
+  function () { return 'na' },
+  function () { return 'ilha' },
+  function () { return 'de' },
+  function () { return 'Montserrat,' },
+  function () { return 'um' },
+  function () { return 'território' },
+  function () { return 'ultramarino' },
+  function () { return 'do' },
+  function () { return 'Reino' },
+  function () { return 'Unido' },
+  function () { return 'localizado' },
+  function () { return 'na' },
+  function () { return 'cadeia' },
+  function () { return 'de' },
+  function () { return 'Ilhas' },
+  function () { return 'de' },
+  function () { return 'Sotavento' },
+  function () { return 'nas' },
+  function () { return 'Pequenas' },
+  function () { return 'Antilhas,' },
+  function () { return 'Índias' },
+  function () { return 'Ocidentais.' }
+]
+let sentence = ''
+for(let i = 0; i < functions.length; i++){
+  sentence += `${functions[i]()} `
+}
+console.log(sentence)
