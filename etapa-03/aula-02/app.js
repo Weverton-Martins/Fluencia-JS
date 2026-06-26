@@ -24,6 +24,7 @@ myFunc(number => {
     console.log(number)
 })
 
+// forEach
 const socialNetworks = ['youtube', 'twitter', 'instagram', 'facebook']
 
 const logArrayInfo = (socialNetwork, index, array) => {
@@ -31,3 +32,4 @@ const logArrayInfo = (socialNetwork, index, array) => {
 }
 
 socialNetworks.forEach(logArrayInfo)
+
