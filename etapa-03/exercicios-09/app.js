@@ -52,10 +52,28 @@ console.log(locateCaracter('weverton', 'o'))
   - Crie uma função que, ao ser invocada, retorna um boolean indicando se o item
     passado por argumento existe no array (também passado por argumento).
 */
+const locateBoolean = (item, array ) => array.includes(item)
 
+console.log(locateBoolean('pera', ['banana', 'uva', 'pera']))
 /*
   06
 
   - Crie uma função que retorna a concatenação de 2 arrays, passados como
     argumentos em sua invocação;
+*/
+const concatArrays = (lista1, lista2) => lista1.concat(lista2)
+
+console.log(concatArrays([1, 2, 3], [4, 5, 6]))
+/*
+  07
+
+  - Crie uma função que retorna o array passado como argumento em sua invocação,
+    mas com o último item removido.
+*/
+
+/*
+  08
+
+  - Crie uma função que retorna se o valor passado como argumento em sua
+    invocação é null.
 */
