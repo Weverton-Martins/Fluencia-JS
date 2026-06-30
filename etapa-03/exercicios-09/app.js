@@ -195,20 +195,13 @@ section.innerHTML = paragraphs
 /*
   14
 
-  - Implemente uma função que retorna uma string com a quantidade de pessoas que
-    curtiram um post, conforme descrito a seguir;
-  - A função deve receber por parâmetro um array com os nomes das pessoas que
-    curtiram o post/vídeo/foto;
-  - Se o array recebido estiver vazio, a mensagem que a função deve retornar é
-    "Ninguém curtiu isso";
-  - Se o array conter apenas um nome, como "Rafael", por exemplo, a mensagem
-    retornada deve ser "Rafael curtiu isso";
+  - Implemente uma função que retorna uma string com a quantidade de pessoas que curtiram um post, conforme descrito a seguir;
+  - A função deve receber por parâmetro um array com os nomes das pessoas que curtiram o post/vídeo/foto;
+  - Se o array recebido estiver vazio, a mensagem que a função deve retornar é "Ninguém curtiu isso";
+  - Se o array conter apenas um nome, como "Rafael", por exemplo, a mensagem retornada deve ser "Rafael curtiu isso";
   - Se o array conter 2 nomes, a mensagem retornada deve ser
     "NOME_1 e NOME_2 curtiram isso";
   - Se o array conter 3 nomes, a mensagem retornada deve ser
     "NOME_1, NOME_2 e NOME_3 curtiram isso";
-  - Se o array conter 4 ou mais nomes, a mensagem retornada deve ser
-    "NOME_1, NOME_2 e mais X pessoas curtiram isso". O "X" deve ser substituído
-    pelo restante da quantidade de pessoas que curtiram o post (além das duas
-    pessoas já mencionadas no início da mensagem).
+  - Se o array conter 4 ou mais nomes, a mensagem retornada deve ser "NOME_1, NOME_2 e mais X pessoas curtiram isso". O "X" deve ser substituído pelo restante da quantidade de pessoas que curtiram o post (além das duas pessoas já mencionadas no início da mensagem).
 */
