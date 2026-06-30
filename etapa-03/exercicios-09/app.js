@@ -191,6 +191,12 @@ const review = [
 
 let paragraphs = ''
 
+const createParagraphs = index => {
+  paragraphs += `<p>${index}</p>`
+}
+
+review.forEach(createParagraphs)
+
 section.innerHTML = paragraphs
 /*
   14
@@ -205,3 +211,21 @@ section.innerHTML = paragraphs
     "NOME_1, NOME_2 e NOME_3 curtiram isso";
   - Se o array conter 4 ou mais nomes, a mensagem retornada deve ser "NOME_1, NOME_2 e mais X pessoas curtiram isso". O "X" deve ser substituído pelo restante da quantidade de pessoas que curtiram o post (além das duas pessoas já mencionadas no início da mensagem).
 */
+const peopleLikes = (name = []) =>{
+  switch(name.length){
+    case 0:
+      return 'Ninguém curtiu isso'
+    case 1:
+      return `${name[0]} curtiu isso`
+    case 2:
+      return `${name[0]} e ${name[1]} curtiram isso`
+    case 3:
+      return `${name[0]}, ${name[1]} e ${name[2]} curtiram isso`
+    default:
+      return `${name[0]}, ${name[1]} e mais ${name.length - 2} pessoas curtiram isso`
+      
+
+  }
+}
+
+console.log(peopleLikes(['Roger','Weverton', 'João', 'Bruce', 'Ana']))
